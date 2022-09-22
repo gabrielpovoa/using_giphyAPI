@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nunito:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    transition: all .3s linear;
+}
+
+:root {
+    --nunito: 'Nunito', sans-serif;
+    --bungee: 'Bungee Spice', cursive;
+}
+
+::selection {
+    background-color: #7159c1;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    overflow-x: hidden;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--bungee);
+    /* background-color: #454545; */
+}
+
+nav {
+    padding: 2rem 5%;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+main {
+    padding: 2rem 5%;
+    font-family: var(--nunito);
+    color: #FFF;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo .image {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    font-size: 2.8rem;
+}
+
+form {
+    padding: 2rem 0%;
+}
+
+form .search_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+.box {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: .4rem;
+    width: 40rem;
+    padding: 1rem 2rem;
+    text-transform: none;
+}
+
+.search {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: #454545;
+    color: #FFF;
+    text-align: center;
+}
+
+.search:hover {
+    background-color: orange;
+    color: #FFF;
+}
+
+.display_images .box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+.display_images .box_container .images {
+    width: 35rem;
+    height: 35rem;
+}
+
+
+/* .images {
+    display: block;
+} */
+
+.display_images .box_container .images img {
+    object-fit: cover;
+    border: .1rem solid #ccc;
+    width: 100%;
+    height: 100%;
+    max-width: 40rem;
+    border-radius: .5rem;
+}
+
+.popUp {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background-color: #EEE;
+    border-radius: .8rem;
+    width: 50rem;
+    height: 30rem;
+    margin: auto;
+    padding: 2rem 5%;
+    z-index: 10000;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
+}
+
+.close {
+    color: orangered;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--bungee);
+    font-size: 1.8rem;
+}
+
+.popUp img {
+    width: 30vh;
+    max-height: 100%;
+    animation: spin 3s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.popUp .infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.popUp .infos h2 {
+    margin-top: 6rem;
+    color: #333;
+    border-bottom: .2rem solid red;
+}
